@@ -23,11 +23,11 @@ body {
 
 /* Headings "Yanone Kaffeesatz"*/
 h1, h2, h3, h4, h5, h6 {
-	margin: 1.5em 1.5em;
+	margin: 1.25em 0 .5em;
 	color: #222;
 	font-weight: normal;
 	font-family: 'Gowun Dodum', "Microsoft YaHei Light", Arial, Helvetica, sans-serif;
-	line-height: 1.6em;
+	line-height: 1.2em;
 	}
 h1 {
 	font-size: 16px;
