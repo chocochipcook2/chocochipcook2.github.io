@@ -1,5 +1,5 @@
 {
-  "name": "create-react-app-with-typescript",
+  "name": "react-blog",
   "version": "5.0.0",
   "private": true,
   "dependencies": {
@@ -9,17 +9,23 @@
     "@mui/material": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "gh-pages": "^4.0.0",
+    "markdown-to-jsx": "^7.1.7",
     "react": "latest",
     "react-dom": "latest",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "latest",
     "typescript": "latest"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "build": "cross-env NODE_PATH=src react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://chocochipcook2.github.io/react-blog",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -31,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

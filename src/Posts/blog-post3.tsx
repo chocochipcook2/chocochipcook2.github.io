@@ -1,4 +1,4 @@
-# New feature
+const post3 =`# New feature
 
 _March 14, 2020 by [Tom](/)_
 
@@ -15,3 +15,5 @@ Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus si
 Aenean lacinia bibendum nulla sed consectetur.
 
 Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+`
+export default post3;

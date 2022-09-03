@@ -12,10 +12,10 @@ import FeaturedPost from './Components/Home/FeaturedPost';
 import Main from './Components/Home/Main';
 import Sidebar from './Components/Home/Sidebar';
 import Footer from './Components/Common/Footer';
-import post1 from './Posts/blog-post.1.md';
-import post2 from './Posts/blog-post.2.md';
-import post3 from './Posts/blog-post.3.md';
-import theme from './Config/theme';
+import post1 from './Posts/blog-post1';
+import post2 from './Posts/blog-post2';
+import post3 from './Posts/blog-post3';
+import defaulttheme from './Config/theme';
 
 
 const sections = [
@@ -89,7 +89,7 @@ const sidebar = {
 
 export default function Blog() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={defaulttheme}>
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
