@@ -1,0 +1,16 @@
+export default Object.freeze({
+    operatorFunctionalDepart :'./Images/operatorFuntionalDepart.png',
+    operatorPriority :'./Images/operatorPriority.png',
+    operatorPriority2 :'./Images/operatorPriority2.png',
+    typetransError :'./Images/typetransError.png',
+    bitORAND :'./Images/bitORAND.png',
+    bitXOR :'./Images/bitXOR.png',
+    cliInput :'./Images/cliInput.png',
+    loopArrayStructure :'./Images/loopArrayStructure.png',
+    loopInnerVariable :'./Images/loopInnerVariable.png',
+    arrayCopy :'./Images/arraycopy.png',
+    arrayDefaultValue :'./Images/arrayDefaultValue.png',
+    arrayForLanguages :'./Images/arrayForLanguages.png',
+    stringEquals :'./Images/stringEquals.png',
+    stringClassMathod :'./Images/stringClassMathod.png',
+  })

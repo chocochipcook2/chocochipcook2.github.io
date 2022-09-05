@@ -9,12 +9,14 @@
     "@mui/material": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-syntax-highlighter": "^15.5.5",
     "gh-pages": "^4.0.0",
     "markdown-to-jsx": "^7.1.7",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "^6.3.0",
     "react-scripts": "latest",
+    "react-syntax-highlighter": "^15.5.0",
     "typescript": "latest"
   },
   "scripts": {
@@ -25,7 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://chocochipcook2.github.io/react-blog",
+  "homepage": "https://chocochipcook2.github.io",
   "browserslist": {
     "production": [
       ">0.2%",

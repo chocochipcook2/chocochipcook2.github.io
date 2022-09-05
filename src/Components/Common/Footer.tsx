@@ -1,18 +1,18 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
+    <Typography variant='body2' color='text.secondary' align='center'>
+      {"Copyright © "}
+      <Link color='inherit' href='https://chocochipcook2.github.io/'>
+        chocochipcook2.github.io/
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
@@ -26,16 +26,16 @@ export default function Footer(props: FooterProps) {
   const { description, title } = props;
 
   return (
-    <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
-      <Container maxWidth="lg">
-        <Typography variant="h6" align="center" gutterBottom>
+    <Box component='footer' sx={{ bgcolor: "background.paper", py: 6 }}>
+      <Container maxWidth='lg'>
+        <Typography variant='h6' align='center' gutterBottom>
           {title}
         </Typography>
         <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
+          variant='subtitle1'
+          align='center'
+          color='text.secondary'
+          component='p'
         >
           {description}
         </Typography>

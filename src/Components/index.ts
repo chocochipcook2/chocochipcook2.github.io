@@ -1,0 +1,1 @@
+export {default as BlogContents} from './Blog/BlogContents'
