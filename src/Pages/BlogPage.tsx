@@ -1,6 +1,6 @@
 import { Stack, Box, Paper, Pagination } from "@mui/material";
 import * as React from "react";
-import { Chap03, Chap04 } from "../Posts";
+import { Chap03, Chap04, Chap05 } from "../Posts";
 const BlogPage: React.FC = () => {
   return (
     <Box>
@@ -8,6 +8,7 @@ const BlogPage: React.FC = () => {
         <Paper>
           <Chap03 />
           <Chap04 />
+          <Chap05 />
         </Paper>
         <Paper sx={{ height: 30 }}>
           <Pagination count={10} />

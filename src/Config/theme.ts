@@ -34,7 +34,7 @@ const theme = createTheme({
   },
   components: {
     MuiTypography: {
-      defaultProps: { marginBottom: "15px" },
+      defaultProps: { marginBottom: "15px", variant: "h6" },
     },
     MuiCssBaseline: {
       styleOverrides: ``,
