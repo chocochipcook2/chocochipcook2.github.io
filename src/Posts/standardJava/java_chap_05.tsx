@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
-import { Prism as Highlighter } from "react-syntax-highlighter";
+import { Prism as CodeBlock } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import { Button, Paper, Typography } from "@mui/material";
@@ -26,7 +26,7 @@ int[][] arr = new int[][]{
 `;
 const JavaChap05: React.FC = () => {
   return (
-    <Paper variant='outlined' sx={{ padding: 5 }}>
+    <Paper variant='outlined' sx={{ padding: 5, marginY: 2 }}>
       <Typography variant='h3'>Chap.05 배열</Typography>
       <Typography variant='h4'>5.1.2 배열의 선언과 생성</Typography>
       <Typography variant='h6'>
@@ -36,9 +36,9 @@ const JavaChap05: React.FC = () => {
         null로 초기화된다.
       </Typography>
       <img src={Images.arrayDefaultValue} />
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {arrayInitCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>
         일반적으로 배열을 그대로 출력하려고 하면 배열의 타입@주소 형식의 값이
         나온다.
@@ -66,9 +66,9 @@ const JavaChap05: React.FC = () => {
       <img src={Images.cliInput} />
       <Typography variant='h4'>5.3 다차원 배열</Typography>
       <Typography variant='h5'>5.3.1 2차원 배열</Typography>
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {dim2ArrayCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>
         4장에서 배운 향상된 for문은 배열 조작에 많이 사용되는데 내부 변수는 해당
         요소의 참조 값 자체를 가져오므로 <br />

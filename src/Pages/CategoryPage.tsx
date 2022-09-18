@@ -2,7 +2,7 @@ import { Stack, Box, Paper, Pagination, Typography } from "@mui/material";
 import * as React from "react";
 import { useState } from "react";
 import { BlogContents } from "../Components";
-const BlogPage: React.FC = () => {
+const CategoryPage: React.FC = () => {
   const [page, setPage] = useState(1);
 
   return (
@@ -17,4 +17,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage;
+export default CategoryPage;

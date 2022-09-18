@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
-import { Prism as Highlighter } from "react-syntax-highlighter";
+import { Prism as CodeBlock } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import { Button, Paper, Typography } from "@mui/material";
@@ -39,13 +39,13 @@ const doWhileCodeDefault = `do {
 `;
 const JavaChap04: React.FC = () => {
   return (
-    <Paper variant='outlined' sx={{ padding: 5 }}>
+    <Paper variant='outlined' sx={{ padding: 5, marginY: 2 }}>
       <Typography variant='h3'>Chap.04. 조건문과 반복문</Typography>
       <Typography variant='h4'>4.1 조건문</Typography>
       <Typography variant='h5'>if문</Typography>
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {ifCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>
         조건식은 반드시 true or false 여야한다.(0, 1, 문자열 불가능?)
         <br />
@@ -53,9 +53,9 @@ const JavaChap04: React.FC = () => {
         작성이 가능하다.
       </Typography>
       <Typography variant='h5'>switch문</Typography>
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {switchCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>
         일부러 break문을 생략해 차례차례 실행되고 어느시점에서 이탈하도록만들
         수도 있겠다.
@@ -94,9 +94,9 @@ const JavaChap04: React.FC = () => {
       </Typography>
       <Typography variant='h4'>4.2 반복문</Typography>
       <Typography variant='h5'>4.2.1 for문</Typography>
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {forCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>초기화는 한번에 여러 변수 가능</Typography>
       <img src={Images.loopInnerVariable} />
       <Typography variant='h6'>
@@ -105,9 +105,9 @@ const JavaChap04: React.FC = () => {
       <img src={Images.loopArrayStructure} />
       <Typography variant='h6'>기본적인 격자형태를 생성하는 반복문</Typography>
       <Typography variant='h5'>향상된 for문</Typography>
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {enhancedForCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>
         간략히 말하자면 배열의 길이만큼 반복하며 내부 변수에는 해당 반복 회차를
         인덱스로 갖는 요소를 할당한다. (1회차에는 1번째 요소)
@@ -115,17 +115,17 @@ const JavaChap04: React.FC = () => {
         javascript의 foreach loop 와 닮아있다.
       </Typography>
       <Typography variant='h5'>4.2.2 while문</Typography>
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {whileCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>
         조건식이 true인 경우 반복실행, 조건식을 변수로 두고 특정상황에 맞춰
         false로 바꿈으로써 반복문을 중지하는 활용이 가능하다.
       </Typography>
       <Typography variant='h5'>4.2.3 do - while 문</Typography>
-      <Highlighter language='java' style={oneDark}>
+      <CodeBlock language='java' style={oneDark}>
         {doWhileCodeDefault}
-      </Highlighter>
+      </CodeBlock>
       <Typography variant='h6'>
         그 밖에 break;와 continue;를 통해 반복문을 중지하거나 다음 사이클로
         건너뛸 수 있다.

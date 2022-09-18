@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 
-import { Prism as Highlighter } from "react-syntax-highlighter";
+import { Prism as CodeBlock } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import { Button, Paper, Typography } from "@mui/material";
@@ -20,7 +20,7 @@ const JavaChap03: React.FC = () => {
   <Button title='reveal' /> : <></> } `;
   const operators = ` +=, *=, /=, <<= 등`;
   return (
-    <Paper variant='outlined' sx={{ padding: 5 }}>
+    <Paper variant='outlined' sx={{ padding: 5, marginY: 2 }}>
       <Typography variant='h3'>Chap.03. 연산자</Typography>
       <Typography variant='h4'>&nbsp;3.1.3 연산자의 종류</Typography>
       <img src='./Images/operatorFunctionalDepart.png' />
@@ -128,9 +128,9 @@ const JavaChap03: React.FC = () => {
       <Typography variant='h6'>
         유일한 3항 연산자이다.
         <br />
-        <Highlighter language='javascript' style={oneDark}>
+        <CodeBlock language='javascript' style={oneDark}>
           {jsCode1}
-        </Highlighter>
+        </CodeBlock>
         <Button
           color={showSome ? "primary" : "secondary"}
           onClick={() => {

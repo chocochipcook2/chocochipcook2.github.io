@@ -19,32 +19,36 @@ import Sidebar from "../Components/Home/Sidebar";
 // import post3 from "../Posts/blog-post3";
 import Chap02 from "../Posts/Chap-02";
 import post1 from "../Posts/java-1-주차";
+import { Posts } from "../Components/Blog/BlogContents";
 
 const mainFeaturedPost = {
-  title: "메인 화면 준비중",
-  description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: "https://source.unsplash.com/random",
-  imageText: "main image description",
+  title: "Chap.06 객체 지향 프로그래밍_2",
+  description: `Chap 6 ~ 7은 이 책에서 가장 중요한 개념으로 저자가 꼭 여러번 반복해서
+        학습하라는 당부를 남겼을 정도이다.
+        분량 자체도 꽤 많은 편이고 소제목 하나 하나 모두 중요한 기초개념들이기
+        때문에 6~7장을 3,4주에 걸쳐 다루기로 했다.`,
+  image: "./Images/javaBookCover.jpeg",
+  imageText: "Standard Java Book Cover",
   linkText: "Continue reading…",
 };
 
 const featuredPosts = [
   {
-    title: "Featured post1 준비중",
-    date: "Nov 12",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageLabel: "Image Text",
+    title: "Chap.06 객체 지향 프로그래밍_1",
+    date: "Sep 12",
+    description: ` 객체지향의 개념은 프로그램을 실제 세계와 비슷하게 만들려는 노력에서
+      탄생했고, 실제 세계는 사물(객체)로 이루어져 있으며, 발생하는 모든
+      사건들은 사물간의 상호작용이다. 라는 개념에 기초한다.`,
+    image: "./Images/javaBookCover.jpeg",
+    imageLabel: "Standard Java Book Cover",
   },
   {
-    title: "Featured post2 준비중",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageLabel: "Image Text",
+    title: "Week01 examples",
+    date: "Sep 12",
+    description: `1. Scanner Class 활용 문제
+      2. 비트 연산자, 형변환?`,
+    image: "./Images/programmers.png",
+    imageLabel: "Programmers School",
   },
 ];
 
@@ -52,25 +56,28 @@ const posts = [post1, Chap02];
 
 const sidebar = {
   title: "About",
-  description:
-    "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.",
+  description: "ChocochipCook2의 블로그 / 제작중...",
   archives: [
-    { title: "March 2020", url: "#" },
-    { title: "February 2020", url: "#" },
-    { title: "January 2020", url: "#" },
-    { title: "November 1999", url: "#" },
-    { title: "October 1999", url: "#" },
-    { title: "September 1999", url: "#" },
-    { title: "August 1999", url: "#" },
-    { title: "July 1999", url: "#" },
-    { title: "June 1999", url: "#" },
-    { title: "May 1999", url: "#" },
-    { title: "April 1999", url: "#" },
+    // { title: "March 2020", url: "#" },
+    // { title: "February 2020", url: "#" },
+    // { title: "January 2020", url: "#" },
+    // { title: "November 1999", url: "#" },
+    // { title: "October 1999", url: "#" },
+    // { title: "September 1999", url: "#" },
+    // { title: "August 1999", url: "#" },
+    // { title: "July 1999", url: "#" },
+    // { title: "June 1999", url: "#" },
+    // { title: "May 1999", url: "#" },
+    // { title: "April 1999", url: "#" },
   ],
   social: [
-    { name: "GitHub", icon: GitHubIcon },
-    { name: "Twitter", icon: TwitterIcon },
-    { name: "Facebook", icon: FacebookIcon },
+    {
+      name: "GitHub",
+      icon: GitHubIcon,
+      link: "https://github.com/chocochipcook2",
+    },
+    { name: "Twitter", icon: TwitterIcon, link: "#" },
+    { name: "Facebook", icon: FacebookIcon, link: "#" },
   ],
 };
 
@@ -84,13 +91,18 @@ const HomePage: React.FC = () => {
         ))}
       </Grid>
       <Grid container spacing={5} sx={{ mt: 3 }}>
-        <Main title='Main Posts' posts={posts} />
-        <Sidebar
-          title={sidebar.title}
-          description={sidebar.description}
-          archives={sidebar.archives}
-          social={sidebar.social}
-        />
+        <Grid md={9} sx={{ px: 2 }}>
+          {Posts[0]}
+          {Posts[1]}
+        </Grid>
+        <Grid md={3}>
+          <Sidebar
+            title={sidebar.title}
+            description={sidebar.description}
+            archives={sidebar.archives}
+            social={sidebar.social}
+          />
+        </Grid>
       </Grid>
     </>
   );

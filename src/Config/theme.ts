@@ -39,6 +39,11 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: ``,
     },
+    // MuiIcon:{
+    //   defaultProps :{
+    //     baseClassName:''
+    //   }
+    // }
   },
 });
 
