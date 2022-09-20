@@ -199,7 +199,7 @@ const JavaChap07: React.FC = () => {
       <CodeBlock>{inheritCode2}</CodeBlock>
       <Typography variant='h5'>1.3 클래스간의 관계 결정하기</Typography>
       <Typography>
-        클래스를 작성할 때 상속관꼐를 맺어줄 것인지 포함관계를 맺어줄 것인지
+        클래스를 작성할 때 상속관계를 맺어줄 것인지 포함관계를 맺어줄 것인지
         결정하는 것은 때때로 혼돈스러울 수 있다.
         <br /> 그럴 때는 ~은 ~이다 와 ~은 ~을 가지고 있다 를 넣어서 문장을
         만들어보면 관계가 보다 명확해진다.

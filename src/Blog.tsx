@@ -9,8 +9,7 @@ import Header from "./Components/Common/Header";
 import Footer from "./Components/Common/Footer";
 import defaulttheme from "./Config/theme";
 
-import { HomePage } from "./Pages";
-import { BlogPage } from "./Pages";
+import { CategoryPage, HomePage, BlogPage } from "./Pages";
 
 const sections = [
   { title: "Home", url: "/" },
@@ -31,6 +30,7 @@ export default function Blog() {
             <Routes>
               <Route path='/' element={<HomePage />}></Route>
               <Route path='/blog' element={<BlogPage />}></Route>
+              <Route path='/categories' element={<CategoryPage />}></Route>
             </Routes>
           </Router>
         </main>

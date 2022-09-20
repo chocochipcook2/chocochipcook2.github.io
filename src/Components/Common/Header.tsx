@@ -45,15 +45,15 @@ export default function Header(props: HeaderProps) {
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
         {sections.map((section) => {
-          let Tlength = section.title.length;
-          let tt = section.title == "Home";
           return (
-            <Button
-              key={section.title}
-              sx={{ bgcolor: "#606060", color: "lightGray" }}
-            >
-              {section.title}
-            </Button>
+            <Link href={section.url}>
+              <Button
+                key={section.title}
+                sx={{ bgcolor: "#606060", color: "lightGray" }}
+              >
+                {section.title}
+              </Button>
+            </Link>
           );
         })}
       </Toolbar>
