@@ -1,23 +1,25 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import * as React from "react";
 import {
-  Chap03,
-  Chap04,
-  Chap05,
-  Chap06,
-  Chap07,
-  Week01,
-  Week02,
+  Week03,
+  Week04,
+  Week05,
+  Week06,
+  Week07,
+  Review01,
+  Review02,
+  Week08,
 } from "../../Posts";
 
 export const Posts: any[] = [
-  <Chap07 />,
-  <Chap06 />,
-  <Week02 />,
-  <Week01 />,
-  <Chap05 />,
-  <Chap04 />,
-  <Chap03 />,
+  <Week08 />,
+  <Week07 />,
+  <Week06 />,
+  <Review02 />,
+  <Review01 />,
+  <Week05 />,
+  <Week04 />,
+  <Week03 />,
 ];
 const BlogContents = (p: number) => {
   let PostsToRender = [];
@@ -27,6 +29,8 @@ const BlogContents = (p: number) => {
       PostsToRender.push(Posts[i]);
     }
   }
-  return PostsToRender;
+  if (PostsToRender.length == 0) {
+    return PostsToRender;
+  } else return PostsToRender;
 };
 export default BlogContents;

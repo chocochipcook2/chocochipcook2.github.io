@@ -154,7 +154,7 @@ const code2_fixed = `class Solution {
     }
 }`;
 
-const JavaWeek01: React.FC = () => {
+const JavaWeekReview01: React.FC = () => {
   return (
     <Paper variant='outlined' sx={{ padding: 5, marginY: 2 }}>
       <Typography variant='h4'>Week01 examples</Typography>
@@ -226,4 +226,4 @@ const JavaWeek01: React.FC = () => {
   );
 };
 
-export default JavaWeek01;
+export default JavaWeekReview01;

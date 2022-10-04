@@ -56,7 +56,7 @@ const posts = [post1, Chap02];
 
 const sidebar = {
   title: "About",
-  description: "ChocochipCook2의 블로그 / 제작중...",
+  description: "ChocoChipCook2의 블로그 / 제작중...",
   archives: [
     // { title: "March 2020", url: "#" },
     // { title: "February 2020", url: "#" },

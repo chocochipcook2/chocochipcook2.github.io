@@ -18,4 +18,9 @@ export default Object.freeze({
   W2Q1: "./Images/W2Q1.png",
   initBlock: "./Images/initializeBlock.png",
   inheritance: "./Images/inheritance",
+  exceptions: "./Images/7_2exceptions.png",
+  overStatic: "./Images/7_2overidingStatic.png",
+  overVsOver: "./Images/7_2overidingVsOverloading.png",
+  staticImport: "./Images/7_3staticImport.png",
+  finalVariables: "./Images/7_4finalVariables.png",
 });

@@ -1,4 +1,4 @@
-const chap01=`<div class="sc-jSFkmK jGLdVH"><div><p>---
+const chap01 = `<div class="sc-jSFkmK jGLdVH"><div><p>---
 title: Java의 정석 Chap.01
 date: 2022-08-30 00:55:37
 tags: [java, jvm, java의정석]
@@ -9,5 +9,16 @@ categories: Java의 정석
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
-}</code></pre><h5 id="-heljava---------">파일명을 Hel.java로 만들었을 때 컴파일러 에러와 함께 파일명을 바꾸라는 안내가 나온다.</h5><p><img src="/image/heljava.png"></p><h5 id="-helloworld------helloworldclass---------">파일명을 HelloWorld로 만들었을 때 컴파일러가 정상 실행되고 HelloWorld.class파일이 생성되며 파일 구동도 잘 되는 것을 확인할 수 있다.</h5><p><img src="/image/hellojava.png"></p><blockquote><p>1.3.4 주석</p><blockquote><p>주석은 //이후로 오는 라인 한줄, /<em>과 </em>/ 사이에 오는 라인 여러 줄로 작성할 수 있다.</p></blockquote></blockquote><h5 id="-c-">이건 C++과 동일한듯?</h5><p><img src="/image/javaBookCover.jpeg"></p><h4 id="------------------">이 외의 많은 내용들은 다른 언어들과 차이점이 거의 없거나 개발 자체에 대한 기초지식에 가까워보여 생략하고 내가 생각하는 포인트들만 찝어보았다.</h4></div></div>`
+}</code></pre>
+<h5 id="-heljava---------">
+파일명을 Hel.java로 만들었을 때 컴파일러 에러와 함께 파일명을 바꾸라는 안내가 나온다.
+</h5>
+<p>
+<img src="/image/heljava.png">
+</p>
+<h5 id="-helloworld------helloworldclass---------">
+파일명을 HelloWorld로 만들었을 때 컴파일러가 정상 실행되고 HelloWorld.class파일이 생성되며 파일 구동도 잘 되는 것을 확인할 수 있다.</h5><p><img src="/image/hellojava.png"></p><blockquote><p>1.3.4 주석</p><blockquote><p>주석은 //이후로 오는 라인 한줄, /<em>과 </em>/ 사이에 오는 라인 여러 줄로 작성할 수 있다.</p></blockquote></blockquote><h5 id="-c-">이건 C++과 동일한듯?</h5><p><img src="/image/javaBookCover.jpeg"></p><h4 id="------------------">이 외의 많은 내용들은 다른 언어들과 차이점이 거의 없거나 개발 자체에 대한 기초지식에 가까워보여 생략하고 내가 생각하는 포인트들만 찝어보았다.
+</h4>
+</div>
+</div>`;
 export default chap01;
