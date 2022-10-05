@@ -139,7 +139,7 @@ FireEngine fe2 = null;
 car = fe;   //car = (Car)fe; 에서 형변환 생략됨
 fe2 = (FireEngine)car;    //형변환 생략불가, 다운캐스팅
 `;
-const JavaWeek08: React.FC = () => {
+const JavaWeek05: React.FC = () => {
   return (
     <Paper variant='outlined' sx={{ padding: 5, marginY: 2 }}>
       <Typography variant='h3'>Chap.07 객체 지향 프로그래밍2_1</Typography>
@@ -679,4 +679,4 @@ CaptionTv c = new CaptionTv();`}</CodeBlock>
   );
 };
 
-export default JavaWeek08;
+export default JavaWeek05;

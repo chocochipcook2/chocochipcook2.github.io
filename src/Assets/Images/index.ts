@@ -23,4 +23,6 @@ export default Object.freeze({
   overVsOver: "./Images/7_2overidingVsOverloading.png",
   staticImport: "./Images/7_3staticImport.png",
   finalVariables: "./Images/7_4finalVariables.png",
+  vectorClass: "./Images/7_5vectorClass.png",
+  exception: "./Images/8_7Exception.png",
 });
