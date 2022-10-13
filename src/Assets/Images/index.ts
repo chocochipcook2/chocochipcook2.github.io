@@ -25,4 +25,5 @@ export default Object.freeze({
   finalVariables: "./Images/7_4finalVariables.png",
   vectorClass: "./Images/7_5vectorClass.png",
   exception: "./Images/8_7Exception.png",
+  quest06_1: "./Images/quest06_1.png",
 });

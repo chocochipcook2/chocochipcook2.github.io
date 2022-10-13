@@ -22,11 +22,11 @@ import post1 from "../Posts/java-1-주차";
 import { Posts } from "../Components/Blog/BlogContents";
 
 const mainFeaturedPost = {
-  title: "Chap.06 객체 지향 프로그래밍_2",
-  description: `Chap 6 ~ 7은 이 책에서 가장 중요한 개념으로 저자가 꼭 여러번 반복해서
-        학습하라는 당부를 남겼을 정도이다.
-        분량 자체도 꽤 많은 편이고 소제목 하나 하나 모두 중요한 기초개념들이기
-        때문에 6~7장을 3,4주에 걸쳐 다루기로 했다.`,
+  title: `JavaStudy Week06
+Chap.7-6 추상 클래스 ~ 8 예외처리`,
+  description: ` 클래스를 설계도에 비유한다면 추상클래스는 미완성 설계도에 비유할 수
+  있다. 미완성 설게도란, 단어의 뜻 그대로 완성되지 못한 채로 남겨진
+  설계도를 말한다.`,
   image: "./Images/javaBookCover.jpeg",
   imageText: "Standard Java Book Cover",
   linkText: "Continue reading…",
@@ -34,21 +34,20 @@ const mainFeaturedPost = {
 
 const featuredPosts = [
   {
-    title: "Chap.06 객체 지향 프로그래밍_1",
-    date: "Sep 12",
-    description: ` 객체지향의 개념은 프로그램을 실제 세계와 비슷하게 만들려는 노력에서
-      탄생했고, 실제 세계는 사물(객체)로 이루어져 있으며, 발생하는 모든
-      사건들은 사물간의 상호작용이다. 라는 개념에 기초한다.`,
+    title: "Chap.07 객체 지향 프로그래밍2_1",
+    date: "Sep 29",
+    description: `7장은 전체적으로 생소한 개념이 많고 제대로 알고 있으면 좋을 개념들이
+    많아 분량이 많은 편이다. 다음 주의 나머지 7장 부분도 양이 상당할 것으로
+    예상된다.`,
     image: "./Images/javaBookCover.jpeg",
     imageLabel: "Standard Java Book Cover",
   },
   {
-    title: "Week01 examples",
-    date: "Sep 12",
-    description: `1. Scanner Class 활용 문제
-      2. 비트 연산자, 형변환?`,
-    image: "./Images/programmers.png",
-    imageLabel: "Programmers School",
+    title: "자바 스터디 6주차 문제",
+    date: "Oct 13",
+    description: `- 눈으로 푸는 문제 ! -`,
+    image: "./Images/Quest06_1.png",
+    imageLabel: "q06_1",
   },
 ];
 

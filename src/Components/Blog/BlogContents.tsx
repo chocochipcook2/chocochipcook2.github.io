@@ -10,9 +10,11 @@ import {
   Review02,
   Week08,
   JavaStudy06,
+  Quest06,
 } from "../../Posts";
 
 export const Posts: any[] = [
+  <Quest06 />,
   <JavaStudy06 />,
   <Week08 />,
   <Week07 />,

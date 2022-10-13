@@ -482,7 +482,7 @@ const JavaWeek06: React.FC = () => {
       <Typography variant='h5'>8.2 내부 클래스의 종류와 특징</Typography>
       <Typography>
         변수가 선언 위치에 따라 여러 종류로 구분되어지듯이 내부 클래스도
-        인스턴스 클래스, 스태틱 클래스. 지역 클래스, 익명 클래스로 나눌 수 있다.
+        인스턴스 클래스, 스태틱 클래스, 지역 클래스, 익명 클래스로 나눌 수 있다.
       </Typography>
       <Typography>
         앞의 세개는 변수의 인스턴스 변수, 클래스 변수, 지역 변수와 성질이
@@ -501,7 +501,7 @@ const JavaWeek06: React.FC = () => {
         인스턴스 맴버는 같은 클래스에 있는 인스턴스 맴버와 static 맴버 모두 직접
         호출이 가능하지만, static 맴버는 인스턴스 맴버를 직접 호출할 수 없는
         것처럼, 인스턴스 클래스는 외부 클래스의 인스턴스 맴버와 스태틱 클래스의
-        맴버를객체 생성 없이 바로 사용할 수 있고, 스태틱 클래스에서는 외부
+        맴버를 객체 생성 없이 바로 사용할 수 있고, 스태틱 클래스에서는 외부
         클래스의 인스턴스 맴버와 인스턴스 클래스의 맴버들을 객체 생성 없이
         사용할 수 없다.
       </Typography>
@@ -603,12 +603,11 @@ const JavaWeek06: React.FC = () => {
       <Typography>
         JDK1.7부터 여러 catch블럭을 | 기호를 이용해 합칠 수 있게 되었다.
       </Typography>
-      <CodeBlock
-        language='java'
-        style={oneDark}
-      >{`catch(Exception1 | Exception2 e){
+      <CodeBlock language='java' style={oneDark}>
+        {`catch(Exception1 | Exception2 e){
 			e.printStactTrace();
-		}`}</CodeBlock>
+		}`}
+      </CodeBlock>
       <Typography>
         여러 인스턴스를 처리하기 때문에 각각 예외 클래스에 포함된 맴버는 사용할
         수 없고 공통 조상 예외 클래스에 선언된 메서드를 호출 할 수 있다.
