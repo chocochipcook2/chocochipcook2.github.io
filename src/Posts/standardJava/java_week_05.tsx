@@ -672,7 +672,7 @@ CaptionTv c = new CaptionTv();`}</CodeBlock>
       </Typography>
       <Typography variant='h5'>
         7장은 전체적으로 생소한 개념이 많고 제대로 알고 있으면 좋을 개념들이
-        많아 분량이 많은 편이다. 다음 주의 나머지 7장 부분도 양이 상당항 것으로
+        많아 분량이 많은 편이다. 다음 주의 나머지 7장 부분도 양이 상당할 것으로
         예상된다.
       </Typography>
     </Paper>

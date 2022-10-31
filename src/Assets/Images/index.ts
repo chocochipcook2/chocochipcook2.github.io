@@ -26,4 +26,10 @@ export default Object.freeze({
   vectorClass: "./Images/7_5vectorClass.png",
   exception: "./Images/8_7Exception.png",
   quest06_1: "./Images/quest06_1.png",
+  StringMethod1: "./Images/StringMethod1",
+  StringMethod2: "./Images/StringMethod2",
+  StringMethod3: "./Images/StringMethod3",
+  StringMethod4: "./Images/StringMethod4",
+  StringMethod5: "./Images/StringMethod5",
+  StringMethod6: "./Images/StringMethod6",
 });

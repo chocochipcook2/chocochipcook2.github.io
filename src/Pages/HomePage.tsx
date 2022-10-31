@@ -46,7 +46,7 @@ const featuredPosts = [
     title: "자바 스터디 6주차 문제",
     date: "Oct 13",
     description: `- 눈으로 푸는 문제 ! -`,
-    image: "./Images/Quest06_1.png",
+    image: "./Images/quest06_1.png",
     imageLabel: "q06_1",
   },
 ];

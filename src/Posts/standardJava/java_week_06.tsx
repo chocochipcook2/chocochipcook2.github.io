@@ -157,8 +157,8 @@ const codeEx8_2_2 = `
 class Outer {
     int value = 10;
     class Inner {
-        Int value = 20;
-        void method1(0{
+        int value = 20;
+        void method1(){
             int value = 30;
             //value == 30;
             //this.value == 20;
