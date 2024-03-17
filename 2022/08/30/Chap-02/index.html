@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<script src="https://kit.fontawesome.com/823269ecf3.js" crossorigin="anonymous"></script>
+  <!-- PACE Progress Bar START -->
+  
+    
+<script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+
+    
+<link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>java의 정석 chap.02 | CCC2&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" content="javajvmjava의정석" />
+  
+  
+  
+  
+  <meta name="description" content="Java 요점 22.1 변수    1. 변수의 선언 int a;    2. 변수의 초기화 int a &#x3D; 0;  한줄에 여러개 가능 ( int a, b;  or  int a&#x3D;17, b&#x3D;10;  변수의 이름 대소문자 구분, 길이 제한 x 예약어 사용 불가능 ( 예약어 &#x3D; 기본적으로 언어에 깔려있는 클래스나 변수, 메서드의 이">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java의 정석 Chap.02">
+<meta property="og:url" content="https://chocochipcook2.github.io/2022/08/30/Chap-02/index.html">
+<meta property="og:site_name" content="CCC2&#39;s blog">
+<meta property="og:description" content="Java 요점 22.1 변수    1. 변수의 선언 int a;    2. 변수의 초기화 int a &#x3D; 0;  한줄에 여러개 가능 ( int a, b;  or  int a&#x3D;17, b&#x3D;10;  변수의 이름 대소문자 구분, 길이 제한 x 예약어 사용 불가능 ( 예약어 &#x3D; 기본적으로 언어에 깔려있는 클래스나 변수, 메서드의 이">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2022-08-29T15:57:01.000Z">
+<meta property="article:modified_time" content="2022-08-29T15:58:49.768Z">
+<meta property="article:author" content="ChocoChipCook2">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="jvm">
+<meta property="article:tag" content="java의정석">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="CCC2&#39;s blog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/my.css">
+
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+  themeMenus["/archives"] = "Archives"; 
+
+  themeMenus["/categories"] = "Categories"; 
+
+  themeMenus["/tags"] = "Tags"; 
+
+  themeMenus["/about"] = "About"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CCC2&#39;s blog" rel="home"> CCC2&#39;s blog </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Chap-02" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Java의 정석 Chap.02
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2022/08/30/Chap-02/" class="article-date">
+	  <time datetime="2022-08-29T15:57:01.000Z" itemprop="datePublished">8월 30, 2022</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java 요점 2<br>2.1 변수<br>    1. 변수의 선언 int a;<br>    2. 변수의 초기화 int a &#x3D; 0;</p>
+<ul>
+<li><p>한줄에 여러개 가능 ( int a, b;  or  int a&#x3D;17, b&#x3D;10;</p>
+<ol start="3">
+<li>변수의 이름<ol>
+<li>대소문자 구분, 길이 제한 x</li>
+<li>예약어 사용 불가능 ( 예약어 &#x3D; 기본적으로 언어에 깔려있는 클래스나 변수, 메서드의 이름)</li>
+<li>숫자로 시작하면 안된다</li>
+<li>특수문자는 _ 와 $ 만 허용한다.<br>  그 외 권장되는 규칙 :</li>
+<li>클래스 이름의 첫 글자는 항상 대문자, 변수와 메서드의 이름 첫 글자는 항상 소문자</li>
+<li>여러 단어로 이루어진 이름은 단어의 첫 글자를 대문자로 한다.(Pascal case)</li>
+<li>상수의 이름은 모두 대문자로 한다. 여러 단어로 이루어진 경우 _ 로 구분한다.<ul>
+<li>PI, MAX_NUMBER</li>
+</ul>
+</li>
+<li>이름은 용도를 알기 쉽게 의미 있는 이름을 쓰는 것이 좋다.<br>2.2 변수의 타입<br>  기본형과 참조형<br> 기본형 변수 ( primitive type) :<br> boolean, char, int, long, float, double, byte, short 8개<br> 참조형 변수 ( reference type) :<br> 객체의 주소를 저장한다.<br> -사용예시 : 클래스이름 변수이름;<br> -Date today &#x3D; new Date();</li>
+</ol>
+</li>
+</ol>
+<p>  2.2.1 기본형 변수<br>      1. boolean을 제외한 나머지 7개 기본형 변수는 서로 연산과 변환이 가능하다.<br>      2. 정수형 변수는 4가지(int, long, byte, short)인데 저장할 수 있는 값의 범위가 다르므로 메모리를 절약하려면 byte나 short를 사용한다. cpu가 가장 효율적으로 처리할 수 있는 타입은 int로 주로 정수형에는 int를 사용한다.</p>
+<p>  2.2.2 상수와 리터럴<br>      상수는 한번 값을 저장하면 다른 값으로 변경할 수 없다.<br>      변수 선언과 동일하며 앞에 final을 붙여준다.<br>      상수는 선언과 동시에 반드시 초기화한다.(사용 전에만 초기화하면 된다)</p>
+<pre><code>  리터럴은 영단어로 literally가 문자 그대로 혹은 정확하게 를 의미하는 것과 같이 상수 그 자체를 표현하는 말이다. 내가 직접 선언한 
+      final int FIRST_VALUE = 12;	
+  가 아닌 12, 19, 1.3824같은 숫자형태 그대로를 칭하는 말이다.
+
+  리터럴의 타입
+      정수형에서는 진법을 나타내는 접두사를 사용한다. 
+       0은 8진수, 0x는 16진수, 0b는 2진수 이다.
+
+      정수형 중간에는 구분자 _ 를 넣어 보기 편하게 쓸 수 있다.
+
+      실수형에서는 타입을 구분하는 접미사를 사용한다.
+      float에는 f를 붙인다. d는 double을 나타내지만 기본적으로 생략하면 double타입으로 간주한다.
+</code></pre>
+<ul>
+<li><p>리터럴 접미사는 long과 float의 l (헷갈림 방지를 위해 L), f 만 신경 쓰면 된다.</p>
+<pre><code>  문자 리터럴
+  문자 리터럴은 문자 하나를 작은 따옴표로 감싼것으로 빈 문자 리터럴은 사용할 수 없고 ‘’ x , 문자열을 감쌀 수 없다 ‘Java’ x
+  문자열 리터럴은 빈 문자열을 허용한다 “”
+  
+
+  문자열에서의 덧셈 연산자
+  덧셈 연산자는 피연산자가 모두 숫자일 때는 두 수를 더하지만, 피연산자 중 어느 한 쪽이 string이면 나머지 한 쪽을 먼저 string으로 변환한 다음 두 string을 결합한다.js
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>이를 활용해 아무 내용이 없는 빈 문자열””을 사용해 다른 타입의 값을 문자열로 변환하는 방법도 있다.</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Java%EC%9D%98-%EC%A0%95%EC%84%9D/">Java의 정석</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java%EC%9D%98%EC%A0%95%EC%84%9D/" rel="tag">java의정석</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li></ul>
+
+      
+            
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/30/java-1-%EC%A3%BC%EC%B0%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java의 정석 Chap.01</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav">None</ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 CCC2&#39;s blog All Rights Reserved.
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/scripts.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<script src="https://kit.fontawesome.com/823269ecf3.js" crossorigin="anonymous"></script>
+  <!-- PACE Progress Bar START -->
+  
+    
+<script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+
+    
+<link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>java의 정석 chap.01 | CCC2&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  <meta name="keywords" content="javajvmjava의정석" />
+  
+  
+  
+  
+  <meta name="description" content="Ch.01. 자바를 시작하기 전에다른 언어를 이미 사용하거나 접해보았던 개발자에게새로운 언어를 배우는 가장 쉬운 방법은 기존에 알고있던 개념과 새로운 언어의 개념을 서로 비교하면서차이점과 공통점을 찾는 것이라고 생각한다.내가 접해보았던 그리고 현재 사용중인 언어로는 크게 javascript(TS), C++ 정도가 있다. 1.1.3 자바언어의 특징   운영체">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java의 정석 Chap.01">
+<meta property="og:url" content="https://chocochipcook2.github.io/2022/08/30/java-1-%EC%A3%BC%EC%B0%A8/index.html">
+<meta property="og:site_name" content="CCC2&#39;s blog">
+<meta property="og:description" content="Ch.01. 자바를 시작하기 전에다른 언어를 이미 사용하거나 접해보았던 개발자에게새로운 언어를 배우는 가장 쉬운 방법은 기존에 알고있던 개념과 새로운 언어의 개념을 서로 비교하면서차이점과 공통점을 찾는 것이라고 생각한다.내가 접해보았던 그리고 현재 사용중인 언어로는 크게 javascript(TS), C++ 정도가 있다. 1.1.3 자바언어의 특징   운영체">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://chocochipcook2.github.io/image/jvmImage.png">
+<meta property="og:image" content="https://chocochipcook2.github.io/image/jdk8arm.png">
+<meta property="og:image" content="https://chocochipcook2.github.io/image/javaVersion.png">
+<meta property="og:image" content="https://chocochipcook2.github.io/image/heljava.png">
+<meta property="og:image" content="https://chocochipcook2.github.io/image/hellojava.png">
+<meta property="article:published_time" content="2022-08-29T15:55:37.000Z">
+<meta property="article:modified_time" content="2022-08-30T06:08:35.315Z">
+<meta property="article:author" content="ChocoChipCook2">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="jvm">
+<meta property="article:tag" content="java의정석">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chocochipcook2.github.io/image/jvmImage.png">
+  
+    <link rel="alternate" href="/atom.xml" title="CCC2&#39;s blog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/my.css">
+
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+  themeMenus["/archives"] = "Archives"; 
+
+  themeMenus["/categories"] = "Categories"; 
+
+  themeMenus["/tags"] = "Tags"; 
+
+  themeMenus["/about"] = "About"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="CCC2&#39;s blog" rel="home"> CCC2&#39;s blog </a>
+            
+          </h1>
+
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-java-1-주차" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Java의 정석 Chap.01
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2022/08/30/java-1-%EC%A3%BC%EC%B0%A8/" class="article-date">
+	  <time datetime="2022-08-29T15:55:37.000Z" itemprop="datePublished">8월 30, 2022</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Ch-01-자바를-시작하기-전에"><a href="#Ch-01-자바를-시작하기-전에" class="headerlink" title="Ch.01. 자바를 시작하기 전에"></a>Ch.01. 자바를 시작하기 전에</h4><h5 id="다른-언어를-이미-사용하거나-접해보았던-개발자에게새로운-언어를-배우는-가장-쉬운-방법은-기존에-알고있던-개념과-새로운-언어의-개념을-서로-비교하면서차이점과-공통점을-찾는-것이라고-생각한다"><a href="#다른-언어를-이미-사용하거나-접해보았던-개발자에게새로운-언어를-배우는-가장-쉬운-방법은-기존에-알고있던-개념과-새로운-언어의-개념을-서로-비교하면서차이점과-공통점을-찾는-것이라고-생각한다" class="headerlink" title="다른 언어를 이미 사용하거나 접해보았던 개발자에게새로운 언어를 배우는 가장 쉬운 방법은 기존에 알고있던 개념과 새로운 언어의 개념을 서로 비교하면서차이점과 공통점을 찾는 것이라고 생각한다."></a>다른 언어를 이미 사용하거나 접해보았던 개발자에게<br/>새로운 언어를 배우는 가장 쉬운 방법은 기존에 알고있던 개념과 새로운 언어의 개념을 서로 비교하면서<br/>차이점과 공통점을 찾는 것이라고 생각한다.</h5><h5 id="내가-접해보았던-그리고-현재-사용중인-언어로는-크게-javascript-TS-C-정도가-있다"><a href="#내가-접해보았던-그리고-현재-사용중인-언어로는-크게-javascript-TS-C-정도가-있다" class="headerlink" title="내가 접해보았던 그리고 현재 사용중인 언어로는 크게 javascript(TS), C++ 정도가 있다."></a>내가 접해보았던 그리고 현재 사용중인 언어로는 크게 javascript(TS), C++ 정도가 있다.</h5><blockquote>
+<p>1.1.3 자바언어의 특징</p>
+<blockquote>
+<ol>
+<li>운영체제에 독립적이다(JVM)</li>
+<li>객체지향 언어이다.</li>
+<li>객체지향 언어면서도 비교적 배우기 쉽다.</li>
+<li>자동 메모리 관리(Garbage Collector)</li>
+<li>네트워크와 분산처리를 지원한다.</li>
+<li>멀티쓰레드를 지원한다.</li>
+<li>동적 로딩을 지원한다.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 id="먼저-1장을-펴자마자-가장-생소한-개념은-JVM-이었다-운영체제에-관계없이-동작하기-위해-java로-작성한-코드가-JVM이라는-별도의-소프트웨어-위에서-해석되고-동작된다는-말이었는데-나에겐-docker가-바로-떠올랐다-아직-정확한-개념을-알-수-없지만-대충-내가-생각한-의미는-아래-그림과-같다"><a href="#먼저-1장을-펴자마자-가장-생소한-개념은-JVM-이었다-운영체제에-관계없이-동작하기-위해-java로-작성한-코드가-JVM이라는-별도의-소프트웨어-위에서-해석되고-동작된다는-말이었는데-나에겐-docker가-바로-떠올랐다-아직-정확한-개념을-알-수-없지만-대충-내가-생각한-의미는-아래-그림과-같다" class="headerlink" title="먼저 1장을 펴자마자 가장 생소한 개념은 JVM 이었다.운영체제에 관계없이 동작하기 위해 java로 작성한 코드가 JVM이라는 별도의 소프트웨어 위에서 해석되고 동작된다는 말이었는데 나에겐 docker가 바로 떠올랐다.아직 정확한 개념을 알 수 없지만 대충 내가 생각한 의미는 아래 그림과 같다."></a>먼저 1장을 펴자마자 가장 생소한 개념은 JVM 이었다.<br/>운영체제에 관계없이 동작하기 위해 java로 작성한 코드가 JVM이라는 별도의 소프트웨어 위에서 해석되고 동작된다는 말이었는데 나에겐 docker가 바로 떠올랐다.<br/>아직 정확한 개념을 알 수 없지만 대충 내가 생각한 의미는 아래 그림과 같다.</h5><p><img src="/image/jvmImage.png"></p>
+<h5 id="또-다른-점은-Garbage-Collection인데C-에서는-당연히-기본적으로-자동-동작하지-않는-기능이기에-최적화-할때가-아니면-학부수준에서는-신경쓸-필요가-없었다-사실-수동으로-해주지-않아도-작동한다는-점에서-존재와-구조만-대충-이해하고-넘어가면-크게-신경쓰지-않아도-알아서-잘-돌아가지-않을까-싶다"><a href="#또-다른-점은-Garbage-Collection인데C-에서는-당연히-기본적으로-자동-동작하지-않는-기능이기에-최적화-할때가-아니면-학부수준에서는-신경쓸-필요가-없었다-사실-수동으로-해주지-않아도-작동한다는-점에서-존재와-구조만-대충-이해하고-넘어가면-크게-신경쓰지-않아도-알아서-잘-돌아가지-않을까-싶다" class="headerlink" title="또 다른 점은 Garbage Collection인데C++에서는 당연히 기본적으로 자동 동작하지 않는 기능이기에 최적화 할때가 아니면 학부수준에서는 신경쓸 필요가 없었다.사실 수동으로 해주지 않아도 작동한다는 점에서 존재와 구조만 대충 이해하고 넘어가면 크게 신경쓰지 않아도 알아서 잘 돌아가지 않을까 싶다.(?)"></a>또 다른 점은 Garbage Collection인데<br/>C++에서는 당연히 기본적으로 자동 동작하지 않는 기능이기에 최적화 할때가 아니면 학부수준에서는 신경쓸 필요가 없었다.<br/>사실 수동으로 해주지 않아도 작동한다는 점에서 존재와 구조만 대충 이해하고 넘어가면 크게 신경쓰지 않아도 알아서 잘 돌아가지 않을까 싶다.(?)</h5><blockquote>
+<p>1.2 자바 환경 구축</p>
+<blockquote>
+<ol>
+<li><a target="_blank" rel="noopener" href="http://java.sun.com/">http://java.sun.com/</a> 에서 JDK 설치</li>
+<li>자주 참고하기 위한 공식 문서인 Java API 문서를 다운 받는다.</li>
+<li>이클립스, 인텔리제이 등의 개발도구 혹은 편집기를 설치한다.</li>
+<li>간단한 코드를 작성 후 컴파일 및 실행해 본다.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h5 id="JDK-설치를-위해-사이트에-접속했더니-18-17-11-8-버전의-자바가-있었다-현재-설지하려는-환경은-애플실리콘-m2-MacOS-이므로-MacOS의-ARM64버전을-받아야하는데-책에서-소개한-8버전의-자바에는-ARM64-버전이-없었다-초보자라-잘-못찾는걸지도"><a href="#JDK-설치를-위해-사이트에-접속했더니-18-17-11-8-버전의-자바가-있었다-현재-설지하려는-환경은-애플실리콘-m2-MacOS-이므로-MacOS의-ARM64버전을-받아야하는데-책에서-소개한-8버전의-자바에는-ARM64-버전이-없었다-초보자라-잘-못찾는걸지도" class="headerlink" title="JDK 설치를 위해 사이트에 접속했더니 18, 17, 11, 8 버전의 자바가 있었다. 현재 설지하려는 환경은 애플실리콘(m2) MacOS 이므로 MacOS의 ARM64버전을 받아야하는데 책에서 소개한 8버전의 자바에는 ARM64 버전이 없었다.- 초보자라 잘 못찾는걸지도"></a>JDK 설치를 위해 사이트에 접속했더니 18, 17, 11, 8 버전의 자바가 있었다.<br/> 현재 설지하려는 환경은 애플실리콘(m2) MacOS 이므로 MacOS의 ARM64버전을 받아야하는데 책에서 소개한 8버전의 자바에는 ARM64 버전이 없었다.<br/>- 초보자라 잘 못찾는걸지도</h5><p><img src="/image/jdk8arm.png"></p>
+<h5 id="그래서-LTS버전중-최신-버전인-17버전을-dmg파일로-설치해보았다-m1-용-JDK가-최근에야-개발된듯하다"><a href="#그래서-LTS버전중-최신-버전인-17버전을-dmg파일로-설치해보았다-m1-용-JDK가-최근에야-개발된듯하다" class="headerlink" title="그래서 LTS버전중 최신 버전인 17버전을 dmg파일로 설치해보았다.(m1 용 JDK가 최근에야 개발된듯하다.)"></a>그래서 LTS버전중 최신 버전인 17버전을 dmg파일로 설치해보았다.(m1 용 JDK가 최근에야 개발된듯하다.)</h5><p><img src="/image/javaVersion.png"></p>
+<blockquote>
+<p>1.3.1 코드 작성시 기본적인 유의사항</p>
+<blockquote>
+<ol>
+<li>Public class는 하나의 소스파일에 한개 이하로 존재해야한다.</li>
+<li>Public class가 있는 경우, 소스파일의 이름은 반드시 public class의 이름과 일치해야 한다.(대소문자 구분)</li>
+<li>Public class가 없는 경우, 소스파일의 이름은 내부에서 선언된 class중 어떤 것의 이름이든 관계 없다.</li>
+</ol>
+</blockquote>
+</blockquote>
+<pre><code>public class HelloWorld &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(&quot;Hello World!&quot;);
+    &#125;
+&#125;
+</code></pre>
+<h5 id="파일명을-Hel-java로-만들었을-때-컴파일러-에러와-함께-파일명을-바꾸라는-안내가-나온다"><a href="#파일명을-Hel-java로-만들었을-때-컴파일러-에러와-함께-파일명을-바꾸라는-안내가-나온다" class="headerlink" title="파일명을 Hel.java로 만들었을 때 컴파일러 에러와 함께 파일명을 바꾸라는 안내가 나온다."></a>파일명을 Hel.java로 만들었을 때 컴파일러 에러와 함께 파일명을 바꾸라는 안내가 나온다.</h5><p><img src="/image/heljava.png"></p>
+<h5 id="파일명을-HelloWorld로-만들었을-때-컴파일러가-정상-실행되고-HelloWorld-class파일이-생성되며-파일-구동도-잘-되는-것을-확인할-수-있다"><a href="#파일명을-HelloWorld로-만들었을-때-컴파일러가-정상-실행되고-HelloWorld-class파일이-생성되며-파일-구동도-잘-되는-것을-확인할-수-있다" class="headerlink" title="파일명을 HelloWorld로 만들었을 때 컴파일러가 정상 실행되고 HelloWorld.class파일이 생성되며 파일 구동도 잘 되는 것을 확인할 수 있다."></a>파일명을 HelloWorld로 만들었을 때 컴파일러가 정상 실행되고 HelloWorld.class파일이 생성되며 파일 구동도 잘 되는 것을 확인할 수 있다.</h5><p><img src="/image/hellojava.png"></p>
+<blockquote>
+<p>1.3.4 주석</p>
+<blockquote>
+<p>주석은 &#x2F;&#x2F;이후로 오는 라인 한줄, &#x2F;*과 *&#x2F; 사이에 오는 라인 여러 줄로 작성할 수 있다.</p>
+</blockquote>
+</blockquote>
+<h5 id="이건-C-과-동일한듯"><a href="#이건-C-과-동일한듯" class="headerlink" title="이건 C++과 동일한듯?"></a>이건 C++과 동일한듯?</h5><h4 id="이-외의-많은-내용들은-다른-언어들과-차이점이-거의-없거나-개발-자체에-대한-기초지식에-가까워보여-생략하고-내가-생각하는-포인트들만-찝어보았다"><a href="#이-외의-많은-내용들은-다른-언어들과-차이점이-거의-없거나-개발-자체에-대한-기초지식에-가까워보여-생략하고-내가-생각하는-포인트들만-찝어보았다" class="headerlink" title="이 외의 많은 내용들은 다른 언어들과 차이점이 거의 없거나 개발 자체에 대한 기초지식에 가까워보여 생략하고 내가 생각하는 포인트들만 찝어보았다."></a>이 외의 많은 내용들은 다른 언어들과 차이점이 거의 없거나 개발 자체에 대한 기초지식에 가까워보여 생략하고 내가 생각하는 포인트들만 찝어보았다.</h4>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Java%EC%9D%98-%EC%A0%95%EC%84%9D/">Java의 정석</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java%EC%9D%98%EC%A0%95%EC%84%9D/" rel="tag">java의정석</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jvm/" rel="tag">jvm</a></li></ul>
+
+      
+            
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/08/30/Chap-02/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java의 정석 Chap.02
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ch-01-%EC%9E%90%EB%B0%94%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84%EC%97%90"><span class="nav-number">1.</span> <span class="nav-text">Ch.01. 자바를 시작하기 전에</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%EB%8B%A4%EB%A5%B8-%EC%96%B8%EC%96%B4%EB%A5%BC-%EC%9D%B4%EB%AF%B8-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B1%B0%EB%82%98-%EC%A0%91%ED%95%B4%EB%B3%B4%EC%95%98%EB%8D%98-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%97%90%EA%B2%8C%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%96%B8%EC%96%B4%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%89%AC%EC%9A%B4-%EB%B0%A9%EB%B2%95%EC%9D%80-%EA%B8%B0%EC%A1%B4%EC%97%90-%EC%95%8C%EA%B3%A0%EC%9E%88%EB%8D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%96%B8%EC%96%B4%EC%9D%98-%EA%B0%9C%EB%85%90%EC%9D%84-%EC%84%9C%EB%A1%9C-%EB%B9%84%EA%B5%90%ED%95%98%EB%A9%B4%EC%84%9C%EC%B0%A8%EC%9D%B4%EC%A0%90%EA%B3%BC-%EA%B3%B5%ED%86%B5%EC%A0%90%EC%9D%84-%EC%B0%BE%EB%8A%94-%EA%B2%83%EC%9D%B4%EB%9D%BC%EA%B3%A0-%EC%83%9D%EA%B0%81%ED%95%9C%EB%8B%A4"><span class="nav-number">1.1.</span> <span class="nav-text">다른 언어를 이미 사용하거나 접해보았던 개발자에게새로운 언어를 배우는 가장 쉬운 방법은 기존에 알고있던 개념과 새로운 언어의 개념을 서로 비교하면서차이점과 공통점을 찾는 것이라고 생각한다.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EB%82%B4%EA%B0%80-%EC%A0%91%ED%95%B4%EB%B3%B4%EC%95%98%EB%8D%98-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%ED%98%84%EC%9E%AC-%EC%82%AC%EC%9A%A9%EC%A4%91%EC%9D%B8-%EC%96%B8%EC%96%B4%EB%A1%9C%EB%8A%94-%ED%81%AC%EA%B2%8C-javascript-TS-C-%EC%A0%95%EB%8F%84%EA%B0%80-%EC%9E%88%EB%8B%A4"><span class="nav-number">1.2.</span> <span class="nav-text">내가 접해보았던 그리고 현재 사용중인 언어로는 크게 javascript(TS), C++ 정도가 있다.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EB%A8%BC%EC%A0%80-1%EC%9E%A5%EC%9D%84-%ED%8E%B4%EC%9E%90%EB%A7%88%EC%9E%90-%EA%B0%80%EC%9E%A5-%EC%83%9D%EC%86%8C%ED%95%9C-%EA%B0%9C%EB%85%90%EC%9D%80-JVM-%EC%9D%B4%EC%97%88%EB%8B%A4-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EC%97%90-%EA%B4%80%EA%B3%84%EC%97%86%EC%9D%B4-%EB%8F%99%EC%9E%91%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%B4-java%EB%A1%9C-%EC%9E%91%EC%84%B1%ED%95%9C-%EC%BD%94%EB%93%9C%EA%B0%80-JVM%EC%9D%B4%EB%9D%BC%EB%8A%94-%EB%B3%84%EB%8F%84%EC%9D%98-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EC%9C%84%EC%97%90%EC%84%9C-%ED%95%B4%EC%84%9D%EB%90%98%EA%B3%A0-%EB%8F%99%EC%9E%91%EB%90%9C%EB%8B%A4%EB%8A%94-%EB%A7%90%EC%9D%B4%EC%97%88%EB%8A%94%EB%8D%B0-%EB%82%98%EC%97%90%EA%B2%90-docker%EA%B0%80-%EB%B0%94%EB%A1%9C-%EB%96%A0%EC%98%AC%EB%9E%90%EB%8B%A4-%EC%95%84%EC%A7%81-%EC%A0%95%ED%99%95%ED%95%9C-%EA%B0%9C%EB%85%90%EC%9D%84-%EC%95%8C-%EC%88%98-%EC%97%86%EC%A7%80%EB%A7%8C-%EB%8C%80%EC%B6%A9-%EB%82%B4%EA%B0%80-%EC%83%9D%EA%B0%81%ED%95%9C-%EC%9D%98%EB%AF%B8%EB%8A%94-%EC%95%84%EB%9E%98-%EA%B7%B8%EB%A6%BC%EA%B3%BC-%EA%B0%99%EB%8B%A4"><span class="nav-number">1.3.</span> <span class="nav-text">먼저 1장을 펴자마자 가장 생소한 개념은 JVM 이었다.운영체제에 관계없이 동작하기 위해 java로 작성한 코드가 JVM이라는 별도의 소프트웨어 위에서 해석되고 동작된다는 말이었는데 나에겐 docker가 바로 떠올랐다.아직 정확한 개념을 알 수 없지만 대충 내가 생각한 의미는 아래 그림과 같다.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EB%98%90-%EB%8B%A4%EB%A5%B8-%EC%A0%90%EC%9D%80-Garbage-Collection%EC%9D%B8%EB%8D%B0C-%EC%97%90%EC%84%9C%EB%8A%94-%EB%8B%B9%EC%97%B0%ED%9E%88-%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%9E%90%EB%8F%99-%EB%8F%99%EC%9E%91%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EA%B8%B0%EB%8A%A5%EC%9D%B4%EA%B8%B0%EC%97%90-%EC%B5%9C%EC%A0%81%ED%99%94-%ED%95%A0%EB%95%8C%EA%B0%80-%EC%95%84%EB%8B%88%EB%A9%B4-%ED%95%99%EB%B6%80%EC%88%98%EC%A4%80%EC%97%90%EC%84%9C%EB%8A%94-%EC%8B%A0%EA%B2%BD%EC%93%B8-%ED%95%84%EC%9A%94%EA%B0%80-%EC%97%86%EC%97%88%EB%8B%A4-%EC%82%AC%EC%8B%A4-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%ED%95%B4%EC%A3%BC%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EC%9E%91%EB%8F%99%ED%95%9C%EB%8B%A4%EB%8A%94-%EC%A0%90%EC%97%90%EC%84%9C-%EC%A1%B4%EC%9E%AC%EC%99%80-%EA%B5%AC%EC%A1%B0%EB%A7%8C-%EB%8C%80%EC%B6%A9-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B3%A0-%EB%84%98%EC%96%B4%EA%B0%80%EB%A9%B4-%ED%81%AC%EA%B2%8C-%EC%8B%A0%EA%B2%BD%EC%93%B0%EC%A7%80-%EC%95%8A%EC%95%84%EB%8F%84-%EC%95%8C%EC%95%84%EC%84%9C-%EC%9E%98-%EB%8F%8C%EC%95%84%EA%B0%80%EC%A7%80-%EC%95%8A%EC%9D%84%EA%B9%8C-%EC%8B%B6%EB%8B%A4"><span class="nav-number">1.4.</span> <span class="nav-text">또 다른 점은 Garbage Collection인데C++에서는 당연히 기본적으로 자동 동작하지 않는 기능이기에 최적화 할때가 아니면 학부수준에서는 신경쓸 필요가 없었다.사실 수동으로 해주지 않아도 작동한다는 점에서 존재와 구조만 대충 이해하고 넘어가면 크게 신경쓰지 않아도 알아서 잘 돌아가지 않을까 싶다.(?)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JDK-%EC%84%A4%EC%B9%98%EB%A5%BC-%EC%9C%84%ED%95%B4-%EC%82%AC%EC%9D%B4%ED%8A%B8%EC%97%90-%EC%A0%91%EC%86%8D%ED%96%88%EB%8D%94%EB%8B%88-18-17-11-8-%EB%B2%84%EC%A0%84%EC%9D%98-%EC%9E%90%EB%B0%94%EA%B0%80-%EC%9E%88%EC%97%88%EB%8B%A4-%ED%98%84%EC%9E%AC-%EC%84%A4%EC%A7%80%ED%95%98%EB%A0%A4%EB%8A%94-%ED%99%98%EA%B2%BD%EC%9D%80-%EC%95%A0%ED%94%8C%EC%8B%A4%EB%A6%AC%EC%BD%98-m2-MacOS-%EC%9D%B4%EB%AF%80%EB%A1%9C-MacOS%EC%9D%98-ARM64%EB%B2%84%EC%A0%84%EC%9D%84-%EB%B0%9B%EC%95%84%EC%95%BC%ED%95%98%EB%8A%94%EB%8D%B0-%EC%B1%85%EC%97%90%EC%84%9C-%EC%86%8C%EA%B0%9C%ED%95%9C-8%EB%B2%84%EC%A0%84%EC%9D%98-%EC%9E%90%EB%B0%94%EC%97%90%EB%8A%94-ARM64-%EB%B2%84%EC%A0%84%EC%9D%B4-%EC%97%86%EC%97%88%EB%8B%A4-%EC%B4%88%EB%B3%B4%EC%9E%90%EB%9D%BC-%EC%9E%98-%EB%AA%BB%EC%B0%BE%EB%8A%94%EA%B1%B8%EC%A7%80%EB%8F%84"><span class="nav-number">1.5.</span> <span class="nav-text">JDK 설치를 위해 사이트에 접속했더니 18, 17, 11, 8 버전의 자바가 있었다. 현재 설지하려는 환경은 애플실리콘(m2) MacOS 이므로 MacOS의 ARM64버전을 받아야하는데 책에서 소개한 8버전의 자바에는 ARM64 버전이 없었다.- 초보자라 잘 못찾는걸지도</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EA%B7%B8%EB%9E%98%EC%84%9C-LTS%EB%B2%84%EC%A0%84%EC%A4%91-%EC%B5%9C%EC%8B%A0-%EB%B2%84%EC%A0%84%EC%9D%B8-17%EB%B2%84%EC%A0%84%EC%9D%84-dmg%ED%8C%8C%EC%9D%BC%EB%A1%9C-%EC%84%A4%EC%B9%98%ED%95%B4%EB%B3%B4%EC%95%98%EB%8B%A4-m1-%EC%9A%A9-JDK%EA%B0%80-%EC%B5%9C%EA%B7%BC%EC%97%90%EC%95%BC-%EA%B0%9C%EB%B0%9C%EB%90%9C%EB%93%AF%ED%95%98%EB%8B%A4"><span class="nav-number">1.6.</span> <span class="nav-text">그래서 LTS버전중 최신 버전인 17버전을 dmg파일로 설치해보았다.(m1 용 JDK가 최근에야 개발된듯하다.)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%ED%8C%8C%EC%9D%BC%EB%AA%85%EC%9D%84-Hel-java%EB%A1%9C-%EB%A7%8C%EB%93%A4%EC%97%88%EC%9D%84-%EB%95%8C-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC-%EC%97%90%EB%9F%AC%EC%99%80-%ED%95%A8%EA%BB%98-%ED%8C%8C%EC%9D%BC%EB%AA%85%EC%9D%84-%EB%B0%94%EA%BE%B8%EB%9D%BC%EB%8A%94-%EC%95%88%EB%82%B4%EA%B0%80-%EB%82%98%EC%98%A8%EB%8B%A4"><span class="nav-number">1.7.</span> <span class="nav-text">파일명을 Hel.java로 만들었을 때 컴파일러 에러와 함께 파일명을 바꾸라는 안내가 나온다.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%ED%8C%8C%EC%9D%BC%EB%AA%85%EC%9D%84-HelloWorld%EB%A1%9C-%EB%A7%8C%EB%93%A4%EC%97%88%EC%9D%84-%EB%95%8C-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC%EA%B0%80-%EC%A0%95%EC%83%81-%EC%8B%A4%ED%96%89%EB%90%98%EA%B3%A0-HelloWorld-class%ED%8C%8C%EC%9D%BC%EC%9D%B4-%EC%83%9D%EC%84%B1%EB%90%98%EB%A9%B0-%ED%8C%8C%EC%9D%BC-%EA%B5%AC%EB%8F%99%EB%8F%84-%EC%9E%98-%EB%90%98%EB%8A%94-%EA%B2%83%EC%9D%84-%ED%99%95%EC%9D%B8%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8B%A4"><span class="nav-number">1.8.</span> <span class="nav-text">파일명을 HelloWorld로 만들었을 때 컴파일러가 정상 실행되고 HelloWorld.class파일이 생성되며 파일 구동도 잘 되는 것을 확인할 수 있다.</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%EC%9D%B4%EA%B1%B4-C-%EA%B3%BC-%EB%8F%99%EC%9D%BC%ED%95%9C%EB%93%AF"><span class="nav-number">1.9.</span> <span class="nav-text">이건 C++과 동일한듯?</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9D%B4-%EC%99%B8%EC%9D%98-%EB%A7%8E%EC%9D%80-%EB%82%B4%EC%9A%A9%EB%93%A4%EC%9D%80-%EB%8B%A4%EB%A5%B8-%EC%96%B8%EC%96%B4%EB%93%A4%EA%B3%BC-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%B4-%EA%B1%B0%EC%9D%98-%EC%97%86%EA%B1%B0%EB%82%98-%EA%B0%9C%EB%B0%9C-%EC%9E%90%EC%B2%B4%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B8%B0%EC%B4%88%EC%A7%80%EC%8B%9D%EC%97%90-%EA%B0%80%EA%B9%8C%EC%9B%8C%EB%B3%B4%EC%97%AC-%EC%83%9D%EB%9E%B5%ED%95%98%EA%B3%A0-%EB%82%B4%EA%B0%80-%EC%83%9D%EA%B0%81%ED%95%98%EB%8A%94-%ED%8F%AC%EC%9D%B8%ED%8A%B8%EB%93%A4%EB%A7%8C-%EC%B0%9D%EC%96%B4%EB%B3%B4%EC%95%98%EB%8B%A4"><span class="nav-number">2.</span> <span class="nav-text">이 외의 많은 내용들은 다른 언어들과 차이점이 거의 없거나 개발 자체에 대한 기초지식에 가까워보여 생략하고 내가 생각하는 포인트들만 찝어보았다.</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 CCC2&#39;s blog All Rights Reserved.
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/scripts.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
