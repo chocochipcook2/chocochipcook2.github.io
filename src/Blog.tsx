@@ -9,7 +9,7 @@ import Header from "./Components/Common/Header";
 import Footer from "./Components/Common/Footer";
 import defaulttheme from "./Config/theme";
 
-import { CategoryPage, HomePage, BlogPage } from "./Pages";
+import { CategoryPage, HomePage, BlogPage, GamePage } from "./Pages";
 
 const sections = [
   { title: "Home", url: "/" },
@@ -23,19 +23,20 @@ export default function Blog() {
   return (
     <ThemeProvider theme={defaulttheme}>
       <CssBaseline />
-      <Container maxWidth='lg'>
+      <Container maxWidth="lg">
         <Header title="CCC2's Blog" sections={sections} />
         <main>
           <Router>
             <Routes>
-              <Route path='/' element={<HomePage />}></Route>
-              <Route path='/blog' element={<BlogPage />}></Route>
-              <Route path='/categories' element={<CategoryPage />}></Route>
+              <Route path="/" element={<HomePage />}></Route>
+              <Route path="/blog" element={<BlogPage />}></Route>
+              <Route path="/categories" element={<CategoryPage />}></Route>
+              <Route path="/game" element={<GamePage />}></Route>
             </Routes>
           </Router>
         </main>
       </Container>
-      <Footer title="CCC2's" description='Thank you for visiting my blog' />
+      <Footer title="CCC2's" description="Thank you for visiting my blog" />
     </ThemeProvider>
   );
 }
