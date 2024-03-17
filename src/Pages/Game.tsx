@@ -6,7 +6,7 @@ const GameHome: React.FC = () => {
   const [page, setPage] = useState(1);
 
   return (
-    <Box>
+    <Box className="absolute w-[100vw]">
       <Stack>
         <Paper>hello</Paper>
       </Stack>
